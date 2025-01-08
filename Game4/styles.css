@@ -1,0 +1,94 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+    height: 100vh;
+    overflow: hidden;
+    color: #333;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2d3436;
+    text-shadow: 1px 1px 2px #fff;
+    margin-bottom: 10px;
+}
+
+#score {
+    font-size: 24px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Grid */
+.grid {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    border: 3px solid #34495e;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #d7e1ec);
+    box-shadow: inset 5px 5px 10px #bcc4cf, inset -5px -5px 10px #ffffff;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* Paddle (User) */
+.user {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background: #74b9ff;
+    border-radius: 20px;
+    bottom: 10px;
+    animation: paddleGlow 2s infinite ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.5);
+}
+
+@keyframes paddleGlow {
+    0%, 100% {
+        box-shadow: 0 5px 10px rgba(0, 123, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 5px 20px rgba(0, 123, 255, 0.8);
+    }
+}
+
+/* Blocks */
+.block {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(145deg, #16a085, #1abc9c);
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(22, 160, 133, 0.5);
+}
+
+/* Ball */
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ff6b6b, #e74c3c);
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.7);
+    animation: ballPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes ballPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
