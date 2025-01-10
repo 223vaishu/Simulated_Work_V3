@@ -1,0 +1,97 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #1a2a6c, #b21f1f, #fdbb2d);
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1.results {
+    font-size: 2rem;
+    margin: 20px 0;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.grid {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #fff;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.invader {
+    background-color: #ff5c5c;
+    border-radius: 10%;
+    animation: invader-animation 1s infinite alternate;
+}
+
+@keyframes invader-animation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.shooter {
+    background-color: #5cff5c;
+    border-radius: 50%;
+    animation: shooter-animation 0.5s infinite alternate;
+}
+
+@keyframes shooter-animation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.laser {
+    background-color: #ffd700;
+    animation: laser-animation 0.2s infinite alternate;
+}
+
+@keyframes laser-animation {
+    0% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0.8);
+    }
+}
+
+.boom {
+    background-color: #ff0000;
+    animation: boom-animation 0.5s;
+}
+
+@keyframes boom-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
